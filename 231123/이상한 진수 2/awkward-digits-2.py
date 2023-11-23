@@ -6,7 +6,7 @@ def solution(binA):
         if binA[i] == '0':
             return int('0b' + binA[:i] + '1' + binA[i+1:], 2)
 
-    return int('0b' + binA[:-2] + '0', 2)
+    return int('0b' + binA[:-1] + '0', 2)
         
 
 binA = input()
