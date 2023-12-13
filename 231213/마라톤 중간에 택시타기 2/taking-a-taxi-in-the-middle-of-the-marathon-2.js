@@ -1,5 +1,5 @@
 const fs = require('fs');
-const inputAll = () => fs.readFileSync('/dev/stdin').toString().split('\n');
+const inputAll = () => fs.readFileSync('/dev/stdin').toString().trim().split('\n');
 const print = (...args) => console.log(...args);
 
 const calcDistance = (p1, p2) => {
