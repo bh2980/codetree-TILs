@@ -1,19 +1,17 @@
-N = int(input())
-numList = list(map(int, input().split()))
+# 합이 최소
+import sys
 
-maxResult = 0
+N = int(input())
+arr = list(map(int, input().split()))
+
+minSum = sys.maxsize
 
 for i in range(N):
-    numList[i] *= 2
-
     tempSum = 0
 
-    for j in range(N - 1):
-        tempSum += abs(numList[j] - numList[j+1])
+    for j in range(N):
+        tempSum += abs(i - j) * arr[j]
 
-    numList[i] //= 2
+    minSum = min(minSum, tempSum)
 
-    maxResult = max(maxResult, tempSum)
-
-
-print(maxResult)
+print(minSum)
