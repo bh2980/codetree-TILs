@@ -6,7 +6,7 @@ let [N, ...arr] = inputAll();
 N = Number(N);
 arr = arr.map(elm => Number(elm));
 
-let maxNum = 0;
+let maxNum = -1;
 
 for(let i = 0; i < arr.length; i++){
     for(let j = i + 1; j < arr.length; j++){
