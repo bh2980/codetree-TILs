@@ -12,7 +12,7 @@ let count = 0;
 for(let i = 0; i < LENGTH; i++){
     for(let j = i + 1; j < LENGTH; j++){
         for(let k = j + 1; k < LENGTH; k++){
-            if(arr[i] <= arr[j] && arr[j] < arr[k]){
+            if(arr[i] <= arr[j] && arr[j] <= arr[k]){
                 count++;
             }
         }
