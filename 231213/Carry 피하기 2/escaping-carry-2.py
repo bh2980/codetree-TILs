@@ -2,7 +2,7 @@
 # 뒤의 숫자를 더할 때 carry가 생기면 그만하고 pass
 # 모든 과정애소 carry가 없다면 최댓값 업데이트
 
-maxValue = 0
+maxValue = -1
 
 N = int(input())
 numList = [int(input()) for _ in range(N)]
