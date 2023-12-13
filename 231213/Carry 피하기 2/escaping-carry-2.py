@@ -18,7 +18,7 @@ for i in range(N):
 
             isCarry = False
 
-            while numA != 0 and numB != 0 and numC != 0:
+            while numA != 0 or numB != 0 or numC != 0:
                 numA, leftA = divmod(numA, 10)
                 numB, leftB = divmod(numB, 10)
                 numC, leftC = divmod(numC, 10)
