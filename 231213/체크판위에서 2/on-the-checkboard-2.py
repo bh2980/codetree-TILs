@@ -14,6 +14,10 @@ MAP = [input().split() for _ in range(N)]
 startTile = MAP[0][0]
 endTile = MAP[N-1][M-1]
 
+if startTile == endTile:
+    print(0)
+    exit(0)
+
 count = 0
 
 for i in range(1, N - 1):
