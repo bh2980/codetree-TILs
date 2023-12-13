@@ -28,22 +28,25 @@ def solution():
                         print(i + 2 + 1, j + 2 + 1)
                         return
                 except:
-                    try:
-                        # 세로 확인
-                        if BOARD[i + 1][j] == color and BOARD[i + 2][j] == color and BOARD[i + 3][j] == color and BOARD[i + 4][j] == color:
-                            print(color)
-                            print(i + 2 + 1, j + 1)
-                            return
-                    except:
-                        # 가로 확인
-                        try:
-                            if BOARD[i][j + 1] == color and BOARD[i][j + 2] == color and BOARD[i][j + 3] == color and BOARD[i][j + 4] == color:
-                                print(color)
-                                print(i + 1, j + 2 + 1)
-                                return
-                        except:
-                            continue
+                    pass
+                
+                try:
+                    # 세로 확인
+                    if BOARD[i + 1][j] == color and BOARD[i + 2][j] == color and BOARD[i + 3][j] == color and BOARD[i + 4][j] == color:
+                        print(color)
+                        print(i + 2 + 1, j + 1)
+                        return
+                except:
+                    pass
 
+                # 가로 확인
+                try:
+                    if BOARD[i][j + 1] == color and BOARD[i][j + 2] == color and BOARD[i][j + 3] == color and BOARD[i][j + 4] == color:
+                        print(color)
+                        print(i + 1, j + 2 + 1)
+                        return
+                except:
+                    continue
 
     print(0)
 
