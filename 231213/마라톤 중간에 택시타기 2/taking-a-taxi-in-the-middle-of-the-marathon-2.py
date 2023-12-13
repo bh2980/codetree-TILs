@@ -11,13 +11,16 @@ import sys
 
 minDis = sys.maxsize
 
-for skip in range(1, len(pointList) - 1):
-    skippedArr = pointList[:skip] + pointList[skip + 1:]
-
+for skip in range(1, N - 1):
     tempDistance = 0
+    prevIdx = 0
 
-    for i in range(len(skippedArr) - 1):
-        tempDistance += calcDistance(skippedArr[i], skippedArr[i + 1])
+    for i in range(1, N):
+        if i == skip:
+            continue
+
+        tempDistance += calcDistance(pointList[prevIdx], pointList[i])
+        prevIdx = i
 
     minDis = min(minDis, tempDistance)
 
