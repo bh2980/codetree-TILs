@@ -15,11 +15,13 @@ arr = [0 for _ in range(maxCount)]
 for idx, alpha in numList:
     arr[idx] = alpha
 
-maxSum = sum(arr[:K + 1])
+photoLength = K + 1
+
+maxSum = sum(arr[:photoLength])
 tempSum = maxSum
 
-for i in range(K + 1, N):
-    previdx = i - (K + 1)
+for i in range(photoLength + 1, maxCount):
+    previdx = i - (photoLength + 1)
 
     tempSum -= arr[previdx]
     tempSum += arr[i]
