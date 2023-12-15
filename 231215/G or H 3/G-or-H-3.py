@@ -19,7 +19,7 @@ maxSum = sum(arr[:K + 1])
 tempSum = maxSum
 
 for i in range(K + 1, N):
-    previdx = i - K
+    previdx = i - (K + 1)
 
     tempSum -= arr[previdx]
     tempSum += arr[i]
