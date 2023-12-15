@@ -13,12 +13,14 @@ for si in range(N):
         if not inRange(ei, ej):
             continue
 
-        nsi, nsj = [ei, ej + 1] if ej + 1 < N else [ei + 1, 0]
-        nei, nej = nsi, nsj + 2
+        for nsi in range(si, N):
+            for nsj in range(sj + 1 if nsi == si else 0, N):
+                nei, nej = nsi, nsj + 2
 
-        if not inRange(nei, nej):
-            continue
+                if not inRange(nei, nej):
+                    continue
 
-        maxCount = max(maxCount, sum(MAP[si][sj:ej + 1]) + sum(MAP[nsi][nsj:nej + 1]))
+                # print((si, sj), (ei, ej), '/', (nsi, nsj), (nei, nej))
+                maxCount = max(maxCount, sum(MAP[si][sj:ej + 1]) + sum(MAP[nsi][nsj:nej + 1]))
 
 print(maxCount)
